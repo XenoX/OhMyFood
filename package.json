@@ -1,0 +1,17 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet 3 du parcours Développeur Web d'OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --style compressed ./sass/main.scss:./public/css/style.css",
+    "sass-watch": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/"
+  },
+  "author": "XenoX",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1"
+  }
+}

@@ -1,0 +1,366 @@
+@keyframes wiggle {
+  25% {
+    transform: translateX(1%);
+  }
+  75% {
+    transform: translateX(-1%);
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes progress-bar {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-bottom: 70px;
+}
+
+.fa-music {
+  font-size: 4rem;
+  background-image: -webkit-linear-gradient(to right, #F04A5E, #F7926D);
+  background-image: linear-gradient(to right, #F04A5E, #F7926D);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+@media screen and (max-width: 1200px) {
+  .fa-music {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .fa-music {
+    font-size: 2.5rem;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #FCCC47;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+a {
+  color: #FCCC47;
+  text-decoration: none;
+}
+
+body > header {
+  background-color: #579C87;
+  height: 120px;
+  margin-bottom: 60px;
+}
+body > header img {
+  max-height: 60px;
+  display: block;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: space-around;
+}
+
+body > footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #579C87;
+  height: 70px;
+}
+body > footer .item {
+  padding: 0 20px;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 70px;
+}
+body > footer .item:hover {
+  animation: wiggle 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 3;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  margin-bottom: 3%;
+  min-height: 450px;
+  box-shadow: 0 0 6px #ccc;
+}
+
+.menu--la-note-enchantee {
+  background-color: #FCDFDB;
+}
+.menu--la-note-enchantee h2 {
+  font-family: "Devonshire", cursive;
+  background-image: -webkit-linear-gradient(to right, #3A0912, #3A0912);
+  background-image: linear-gradient(to right, #3A0912, #3A0912);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.menu--la-note-enchantee h3 {
+  font-family: "Sriracha", cursive;
+}
+.menu--la-note-enchantee p {
+  font-family: "Sriracha", cursive;
+  color: #3A0912;
+}
+.menu--le-chic-a-la-francaise {
+  background-color: #FFF5FE;
+}
+.menu--le-chic-a-la-francaise h2 {
+  font-family: "Croissant One", cursive;
+  background-image: -webkit-linear-gradient(to right, #C77412, #905BFD);
+  background-image: linear-gradient(to right, #C77412, #905BFD);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.menu--le-chic-a-la-francaise h3 {
+  font-family: "Noto Serif", serif;
+}
+.menu--le-chic-a-la-francaise p {
+  font-family: "Noto Serif", serif;
+  color: #C77412;
+}
+.menu--le-delice-des-papilles {
+  background-color: #F9F9F9;
+}
+.menu--le-delice-des-papilles h2 {
+  font-family: "Parisienne", cursive;
+  background-image: -webkit-linear-gradient(to right, #0431DF, #0E88FB);
+  background-image: linear-gradient(to right, #0431DF, #0E88FB);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.menu--le-delice-des-papilles h3 {
+  font-family: "Sriracha", cursive;
+}
+.menu--le-delice-des-papilles p {
+  font-family: "Sriracha", cursive;
+  color: #0E88FB;
+}
+.menu--la-palette-du-gout {
+  background-color: #FDFFFD;
+}
+.menu--la-palette-du-gout h2 {
+  font-family: "Kaushan Script", cursive;
+  background-image: -webkit-linear-gradient(to right, #72BF56, #BFFF7E);
+  background-image: linear-gradient(to right, #72BF56, #BFFF7E);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.menu--la-palette-du-gout h3 {
+  font-family: "Sriracha", cursive;
+}
+.menu--la-palette-du-gout p {
+  font-family: "Sriracha", cursive;
+  color: #72BF56;
+}
+.menu__header h1 {
+  color: black;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.menu__cover {
+  width: 40%;
+  text-align: center;
+}
+.menu__cover h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+@media screen and (max-width: 1200px) {
+  .menu__cover h2 {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .menu__cover h2 {
+    font-size: 1.3rem;
+  }
+}
+.menu__cover-content {
+  text-align: center;
+  padding: 25px;
+  transition: transform cubic-bezier(0.67, 0.14, 0.29, 0.78) 400ms, opacity cubic-bezier(0.67, 0.14, 0.29, 0.78) 400ms;
+}
+.menu__cover-content:hover {
+  transform: scale(1.3);
+  opacity: 0.6;
+}
+.menu__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 70%;
+  margin: 0 auto 60px auto;
+}
+@media screen and (max-width: 600px) {
+  .menu__container {
+    width: 90%;
+  }
+}
+.menu__content {
+  width: 85%;
+  text-align: center;
+  color: black;
+  margin-bottom: 30px;
+}
+.menu__content--color-orange {
+  color: #C67412;
+}
+.menu__content--color-orange p {
+  color: #C67412;
+}
+.menu__content--color-purple {
+  color: #A56799;
+}
+.menu__content--color-purple p {
+  color: #A56799;
+}
+.menu__content--color-blue {
+  color: #6E4CCC;
+}
+.menu__content--color-blue p {
+  color: #6E4CCC;
+}
+.menu__content--color-black {
+  color: black;
+}
+.menu__content--color-black p {
+  color: black;
+}
+.menu__content h3 {
+  margin: 40px 0;
+  font-size: 1.7rem;
+}
+@media screen and (max-width: 900px) {
+  .menu__content h3 {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .menu__content h3 {
+    font-size: 1.2rem;
+  }
+}
+.menu__content h3::before {
+  content: "---------- ";
+}
+.menu__content h3::after {
+  content: " ----------";
+}
+.menu__content p {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  font-family: "Parisienne";
+  margin: 20px;
+}
+.menu__content p .price {
+  font-size: 1.5rem;
+  padding-left: 20px;
+}
+.menu__content .dark-blue::before, .menu__content .dark-blue::after {
+  color: #0228DD;
+}
+.menu__content .medium-blue::before, .menu__content .medium-blue::after {
+  color: #0670F3;
+}
+.menu__content .light-blue::before, .menu__content .light-blue::after {
+  color: #229DF9;
+}
+.menu__content .gradient-green::before {
+  background-image: -webkit-linear-gradient(to right, #41963C, #B5F879);
+  background-image: linear-gradient(to right, #41963C, #B5F879);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.menu__content .gradient-green::after {
+  background-image: -webkit-linear-gradient(to left, #41963C, #B5F879);
+  background-image: linear-gradient(to left, #41963C, #B5F879);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.btn {
+  background-color: #579C87;
+  font-weight: 400;
+  margin: 0 auto 30px auto;
+  text-align: center;
+  padding: 15px 30px;
+  width: 300px;
+  border-radius: 20px;
+}
+.btn .dot:nth-child(1) {
+  animation: blink 1s infinite 0ms;
+}
+.btn .dot:nth-child(2) {
+  animation: blink 1s infinite 200ms;
+}
+.btn .dot:nth-child(3) {
+  animation: blink 1s infinite 400ms;
+}
+
+#signature {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: baseline;
+  font-family: "Devonshire", cursive;
+  color: #3A0912;
+  margin-bottom: 30px;
+  font-size: 3.2rem;
+}
+@media screen and (max-width: 900px) {
+  #signature {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  #signature {
+    font-size: 2.5rem;
+  }
+}
+#signature i {
+  margin-right: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

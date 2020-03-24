@@ -1,0 +1,16 @@
+.btn {
+  background-color: $colour-secondary;
+  font-weight: $font-weight-bold;
+  margin: 0 auto 30px auto;
+  text-align: center;
+  padding: 15px 30px;
+  width: 300px;
+  border-radius: 20px;
+
+  @for $i from 1 through 3 {
+    $delay: 0ms, 200ms, 400ms;
+    .dot:nth-child(#{$i}) {
+      animation: blink 1s infinite nth($delay, $i);
+    }
+  }
+}

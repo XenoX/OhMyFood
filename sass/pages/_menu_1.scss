@@ -1,0 +1,16 @@
+#signature {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: baseline;
+  font-family: "Devonshire", cursive;
+  color: #3A0912;
+  margin-bottom: 30px;
+  font-size: 3.2rem;
+  @include media-sm { font-size: 2.8rem; }
+  @include media-xs { font-size: 2.5rem; }
+
+  i {
+    margin-right: 20px;
+  }
+}

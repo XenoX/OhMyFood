@@ -1,0 +1,12 @@
+body > header {
+  background-color: $colour-secondary;
+  height: $header-height;
+  margin-bottom: $header-height / 2;
+
+  img {
+    max-height: $header-height / 2;
+    display: block;
+    margin: 0 auto;
+    padding: $header-height / 4 0;
+  }
+}
