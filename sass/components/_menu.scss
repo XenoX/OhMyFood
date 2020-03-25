@@ -40,10 +40,8 @@ $menu-themes: (
   
       h2 {
         font-family: map-get($theme, title-family);
-        background-image: -webkit-linear-gradient(to right, map-get($theme, title-color-start), map-get($theme, title-color-stop));
         background-image: linear-gradient(to right, map-get($theme, title-color-start), map-get($theme, title-color-stop));
         color: transparent;
-        -webkit-background-clip: text;
         background-clip: text;
       }
 
@@ -54,6 +52,10 @@ $menu-themes: (
       p {
         font-family: map-get($theme, text-family);
         color: map-get($theme, text-color);
+      }
+
+      .underline::after {
+        background-color: map-get($theme, title-color-start);
       }
     }
   }
@@ -110,6 +112,7 @@ $menu-themes: (
       &--#{'color-' + $name} {
         color: $value;
         p { color: $value; }
+        .underline::after { background-color: $value; }
       } 
     }
   
@@ -121,6 +124,24 @@ $menu-themes: (
 
       &::before { content: "---------- "; }
       &::after { content: " ----------"; }
+    }
+
+    .underline {
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 3px;
+        width: 0;
+        right: 0;
+        transition: width 1s ease;
+      }
+
+      &:hover::after {
+        left: 0;
+        width: 100%;
+      }
     }
 
     p {
@@ -146,17 +167,13 @@ $menu-themes: (
 
     .gradient-green {
       &::before {
-        background-image: -webkit-linear-gradient(to right, #41963C, #B5F879);
         background-image: linear-gradient(to right, #41963C, #B5F879);
         color: transparent;
-        -webkit-background-clip: text;
         background-clip: text;
       }
       &::after {
-        background-image: -webkit-linear-gradient(to left, #41963C, #B5F879);
         background-image: linear-gradient(to left, #41963C, #B5F879);
         color: transparent;
-        -webkit-background-clip: text;
         background-clip: text;
       }
     }
